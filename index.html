@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdant Works | Landscaping & Manpower Solutions</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#059669', // Emerald Green
+                        'secondary': '#10b981', // Light Green
+                        'dark-bg': '#1f2937', // Dark Gray for sections
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .page-section {
+            display: none;
+            min-height: calc(100vh - 80px); /* Ensure content fills screen below header */
+            padding-top: 80px; /* Space for fixed header */
+        }
+        .page-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <!-- Fixed Header/Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <!-- Logo -->
+            <a href="#home" class="text-2xl font-extrabold text-primary tracking-tight" onclick="showPage('home')">
+                Meta Green <span class="text-gray-900">Forms</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-600 hover:text-primary transition duration-300 font-medium" data-target="home">Home</a>
+                <a href="#services" class="nav-link text-gray-600 hover:text-primary transition duration-300 font-medium" data-target="services">Services</a>
+                <a href="#portfolio" class="nav-link text-gray-600 hover:text-primary transition duration-300 font-medium" data-target="portfolio">Portfolio</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-primary transition duration-300 font-medium" data-target="about">About Us</a>
+                <a href="#contact" class="nav-link text-white bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition duration-300" data-target="contact">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary p-2 focus:outline-none rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2 border-t border-gray-200">
+            <a href="#home" class="mobile-nav-link block px-4 py-2 text-gray-700 hover:bg-gray-100" data-target="home">Home</a>
+            <a href="#services" class="mobile-nav-link block px-4 py-2 text-gray-700 hover:bg-gray-100" data-target="services">Services</a>
+            <a href="#portfolio" class="mobile-nav-link block px-4 py-2 text-gray-700 hover:bg-gray-100" data-target="portfolio">Portfolio</a>
+            <a href="#about" class="mobile-nav-link block px-4 py-2 text-gray-700 hover:bg-gray-100" data-target="about">About Us</a>
+            <a href="#contact" class="mobile-nav-link block px-4 py-2 text-white bg-primary hover:bg-secondary m-2 rounded-lg text-center" data-target="contact">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HOME SECTION -->
+        <section id="home" class="page-section active bg-gray-50 pt-24 pb-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="lg:col-span-6 flex flex-col justify-center">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
+                            Precision <span class="text-primary">Landscaping</span> & <br class="hidden sm:inline"> Managed <span class="text-primary">Workforce</span>
+                        </h1>
+                        <p class="text-xl text-gray-500 mb-8">
+                            Verdant Works delivers integrated solutions: expert horticultural design and reliable, skilled labor staffing for large commercial and residential projects.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#services" onclick="showPage('services')" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-md text-white bg-primary hover:bg-secondary transition duration-300">
+                                View Services
+                            </a>
+                            <a href="#portfolio" onclick="showPage('portfolio')" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-100 transition duration-300">
+                                See Our Work
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-12 lg:mt-0 lg:col-span-6">
+                        <!-- Placeholder Image -->
+                        <div class="rounded-xl shadow-2xl overflow-hidden">
+                            <img src="https://placehold.co/600x400/059669/ffffff?text=Modern+Landscape+Design" alt="Modern Landscape Design" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. SERVICES SECTION -->
+        <section id="services" class="page-section bg-white pt-16 pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-primary text-sm font-semibold uppercase tracking-wider">What We Offer</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Integrated Grounds & Labor Solutions
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <!-- Landscaping Card -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            Design & Horticulture
+                        </h3>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>**3D Landscape Design:** Conceptual modeling and visual planning.</li>
+                            <li>**Installation:** Full-service planting, hardscaping, and irrigation systems.</li>
+                            <li>**Seasonal Maintenance:** Scheduled trimming, fertilization, and restoration.</li>
+                            <li>**Water Management:** Smart irrigation setup and drought-tolerant planting.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Manpower Card -->
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-3m-1.5-11L14 3m-2 3V4m-2 2H8m-6 6h16M7 16V8h10v8H7z"></path></svg>
+                            Managed Workforce
+                        </h3>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>**Skilled Labor:** Certified crew for planting, mulching, and site prep.</li>
+                            <li>**Project Staffing:** Temporary or long-term team deployment for large projects.</li>
+                            <li>**Site Management:** On-site foremen to ensure efficiency and quality control.</li>
+                            <li>**Safety Compliance:** All personnel are trained and compliant with site safety standards.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PORTFOLIO SECTION -->
+        <section id="portfolio" class="page-section bg-dark-bg pt-16 pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-secondary text-sm font-semibold uppercase tracking-wider">Case Studies</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">
+                        Our Proven Results
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/400x300/4b5563/ffffff?text=Corporate+Campus" alt="Corporate Campus Project" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-primary mb-1">Tech Corporate Campus</h3>
+                            <p class="text-gray-400 text-sm">Full service design and 10-person labor deployment for seasonal maintenance.</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/400x300/4b5563/ffffff?text=Residential+Estates" alt="Residential Estates Project" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-primary mb-1">Luxury Residential Estates</h3>
+                            <p class="text-gray-400 text-sm">Bespoke hardscaping and installation of drought-resistant planting zones.</p>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://placehold.co/400x300/4b5563/ffffff?text=Urban+Revitalization" alt="Urban Revitalization Project" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-primary mb-1">Urban Park Revitalization</h3>
+                            <p class="text-gray-400 text-sm">Large-scale staffing solution for a 6-month public park renovation project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. ABOUT US SECTION -->
+        <section id="about" class="page-section bg-white pt-16 pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-primary text-sm font-semibold uppercase tracking-wider">Our Story</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Commitment to Green Excellence
+                    </h2>
+                </div>
+                <div class="lg:grid lg:grid-cols-3 lg:gap-12">
+                    <div class="lg:col-span-2">
+                        <p class="text-lg text-gray-600 mb-6">
+                            Founded in 2018 by a team of landscape architects and workforce management specialists, Verdant Works was created to fill a critical gap in the industry: the need for integrated solutions. We believe that a beautiful, sustainable design is only as good as the reliable, skilled hands that bring it to life.
+                        </p>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Our dual focus ensures project continuity, budget adherence, and superior quality control from the initial sketch to the final planting. We manage the design, the materials, and the people, so you only have one point of contact. This streamlined approach is what defines our success and the satisfaction of our commercial and high-end residential clients.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-1 bg-gray-50 p-6 rounded-xl shadow-md mt-8 lg:mt-0">
+                        <h3 class="text-xl font-bold text-primary mb-3">Our Mission</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Sustainability in every design.
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Uncompromising labor safety standards.
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-primary mr-2 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                Single-source accountability for all projects.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CONTACT SECTION -->
+        <section id="contact" class="page-section bg-gray-50 pt-16 pb-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-primary text-sm font-semibold uppercase tracking-wider">Get Started</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Schedule a Consultation
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Tell us about your project, whether it's a design concept or a major staffing requirement.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-2xl">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="type" class="block text-sm font-medium text-gray-700 mb-1">Inquiry Type</label>
+                            <select id="type" name="type" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150 bg-white">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Landscaping Design">Landscaping Design</option>
+                                <option value="Manpower Staffing">Manpower Staffing</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="mt-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150"></textarea>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <button type="submit" class="w-full sm:w-auto px-8 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
+                                Send Inquiry
+                            </button>
+                        </div>
+                        <div id="formMessage" class="mt-4 text-center text-sm font-medium hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-3 text-xl font-bold text-primary">VerdantWorks</p>
+            <div class="flex justify-center space-x-4 mb-4 text-sm">
+                <a href="#home" class="hover:text-primary transition duration-300" onclick="showPage('home')">Home</a>
+                <a href="#services" class="hover:text-primary transition duration-300" onclick="showPage('services')">Services</a>
+                <a href="#contact" class="hover:text-primary transition duration-300" onclick="showPage('contact')">Contact</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2024 Verdant Works. All rights reserved. Managed Integrated Solutions.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- Single Page Application (SPA) Logic ---
+
+        // Function to show a specific page section
+        function showPage(targetId) {
+            // Get all sections and hide them
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the target section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+                
+                // Update URL hash without refreshing
+                history.pushState(null, null, `#${targetId}`);
+            }
+        }
+
+        // Handle navigation clicks for SPA routing
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Mobile Menu Toggle
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu and navigate on link click
+            document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('data-target');
+                    showPage(targetId);
+                    
+                    // Hide mobile menu after clicking a link
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+
+            // Handle initial load based on URL hash
+            const initialHash = window.location.hash.substring(1) || 'home';
+            showPage(initialHash);
+        });
+
+        // Handle form submission (Mock success/failure)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            
+            formMessage.classList.remove('hidden');
+            formMessage.classList.remove('text-red-600', 'text-primary');
+            formMessage.innerHTML = 'Sending inquiry...';
+
+            // Simulate API call delay
+            setTimeout(() => {
+                // Simulate success
+                formMessage.classList.add('text-primary');
+                formMessage.innerHTML = 'Thank you! Your inquiry has been sent successfully. We will be in touch within 24 hours.';
+                form.reset();
+                
+                // Automatically hide success message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
