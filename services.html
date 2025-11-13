@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Meta Green Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet" type="text/css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#059669',
+                        'secondary': '#10b981',
+                        'dark-bg': '#1f2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="home.html" class="text-2xl font-extrabold text-primary tracking-tight">
+                <img src="images/green-solutions-logo2.png" alt="Meta Green Solutions" class="h-16"/>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="home.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="services.html" class="text-primary font-medium">Services</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Portfolio</a>
+                <a href="about.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">About Us</a>
+                <a href="contact.html" class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary p-2 focus:outline-none rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2 border-t border-gray-200">
+            <a href="home.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-primary font-medium">Services</a>
+            <a href="portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Portfolio</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+            <a href="contact.html" class="block px-4 py-2 text-white bg-primary hover:bg-secondary m-2 rounded-lg text-center">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="pt-20">
+            <img src="images/services-hero-banner.jpeg" alt="Services Hero Banner" class="w-full h-[700px] object-cover"/>
+        </section>
+        
+        <section class="bg-white pt-16 pb-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-primary text-sm font-semibold uppercase tracking-wider">What We Offer</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Integrated Grounds & Labor Solutions
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            Design & Horticulture
+                        </h3>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>**3D Landscape Design:** Conceptual modeling and visual planning.</li>
+                            <li>**Installation:** Full-service planting, hardscaping, and irrigation systems.</li>
+                            <li>**Seasonal Maintenance:** Scheduled trimming, fertilization, and restoration.</li>
+                            <li>**Water Management:** Smart irrigation setup and drought-tolerant planting.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                        <h3 class="text-2xl font-bold text-primary mb-3 flex items-center">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-3m-1.5-11L14 3m-2 3V4m-2 2H8m-6 6h16M7 16V8h10v8H7z"></path></svg>
+                            Managed Workforce
+                        </h3>
+                        <ul class="list-disc pl-5 text-gray-600 space-y-2">
+                            <li>**Skilled Labor:** Certified crew for planting, mulching, and site prep.</li>
+                            <li>**Project Staffing:** Temporary or long-term team deployment for large projects.</li>
+                            <li>**Site Management:** On-site foremen to ensure efficiency and quality control.</li>
+                            <li>**Safety Compliance:** All personnel are trained and compliant with site safety standards.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="images/green-solutions-logo2.png" alt="Meta Green Solutions" class="h-12 mx-auto mb-3"/>
+            <div class="flex justify-center space-x-4 mb-4 text-sm">
+                <a href="home.html" class="hover:text-primary transition duration-300">Home</a>
+                <a href="services.html" class="hover:text-primary transition duration-300">Services</a>
+                <a href="contact.html" class="hover:text-primary transition duration-300">Contact</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Meta Green Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+.page-section {
+    display: none;
+    min-height: calc(100vh - 80px); /* Ensure content fills screen below header */
+    padding-top: 80px; /* Space for fixed header */
+}
+.page-section.active {
+    display: block;
+}
+.splide__slide img {
+    max-height: 1500px;
+}

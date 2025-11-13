@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Meta Green Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#059669',
+                        'secondary': '#10b981',
+                        'dark-bg': '#1f2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="home.html" class="text-2xl font-extrabold text-primary tracking-tight">
+                <img src="images/green-solutions-logo2.png" alt="Meta Green Solutions" class="h-16"/>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="home.html" class="text-primary font-medium">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Services</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Portfolio</a>
+                <a href="about.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">About Us</a>
+                <a href="contact.html" class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary p-2 focus:outline-none rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2 border-t border-gray-200">
+            <a href="home.html" class="block px-4 py-2 text-primary font-medium">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Portfolio</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+            <a href="contact.html" class="block px-4 py-2 text-white bg-primary hover:bg-secondary m-2 rounded-lg text-center">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="splide pt-24" aria-label="Basic Structure Example">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <img src="images/Lawn-carousel.jpg" alt="Morning Dew on a Pristine Lawn"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/Lawn-carousel2.jpg" alt="Modern Landscape Design with Water Feature"/>
+                    </li>
+                    <li class="splide__slide">
+                        <img src="images/Lawn-carousel3.jpg" alt="Sustainable Urban Garden with Native Plants"/>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-gray-50 pb-16 pt-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+                    <div class="lg:col-span-6 flex flex-col justify-center">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900 mb-6">
+                            Precision <span class="text-primary">Landscaping</span> & <br class="hidden sm:inline"> Managed <span class="text-primary">Workforce</span>
+                        </h1>
+                        <p class="text-xl text-gray-500 mb-8">
+                            Meta Green Solutions delivers integrated solutions: expert horticultural design and reliable, skilled labor staffing for large commercial and residential projects.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="services.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-md text-white bg-primary hover:bg-secondary transition duration-300">
+                                View Services
+                            </a>
+                            <a href="portfolio.html" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-100 transition duration-300">
+                                See Our Work
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-12 lg:mt-0 lg:col-span-6">
+                        <div class="rounded-3xl shadow-2xl overflow-hidden">
+                            <img src="images/home-lush-greenlawn.png" alt="Modern Landscape Design" class="w-full h-auto object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="images/green-solutions-logo2.png" alt="Meta Green Solutions" class="h-12 mx-auto mb-3"/>
+            <div class="flex justify-center space-x-4 mb-4 text-sm">
+                <a href="home.html" class="hover:text-primary transition duration-300">Home</a>
+                <a href="services.html" class="hover:text-primary transition duration-300">Services</a>
+                <a href="contact.html" class="hover:text-primary transition duration-300">Contact</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Meta Green Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            var splide = new Splide('.splide', {
+                type: 'loop',
+                autoplay: true,
+                arrows: false,
+            });
+            splide.mount();
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+</body>
+</html>

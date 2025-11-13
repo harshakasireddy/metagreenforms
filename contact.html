@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Meta Green Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet" type="text/css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#059669',
+                        'secondary': '#10b981',
+                        'dark-bg': '#1f2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-sans">
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-lg z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="home.html" class="text-2xl font-extrabold text-primary tracking-tight">
+                <img src="images/green-solutions-logo2.png" alt="Meta Green Solutions" class="h-16"/>
+            </a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="home.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Home</a>
+                <a href="services.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Services</a>
+                <a href="portfolio.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">Portfolio</a>
+                <a href="about.html" class="text-gray-600 hover:text-primary transition duration-300 font-medium">About Us</a>
+                <a href="contact.html" class="text-white bg-primary hover:bg-secondary px-4 py-2 rounded-lg transition duration-300">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-primary p-2 focus:outline-none rounded-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full bg-white shadow-xl py-2 border-t border-gray-200">
+            <a href="home.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+            <a href="services.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Portfolio</a>
+            <a href="about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About Us</a>
+            <a href="contact.html" class="block px-4 py-2 text-white bg-primary hover:bg-secondary m-2 rounded-lg text-center">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gray-50 pt-24 pb-20">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-primary text-sm font-semibold uppercase tracking-wider">Get Started</span>
+                    <h2 class="mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        Schedule a Consultation
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Tell us about your project, whether it's a design concept or a major staffing requirement.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-2xl">
+                    <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150">
+                            </div>
+                        </div>
+                        <div class="mt-6">
+                            <label for="type" class="block text-sm font-medium text-gray-700 mb-1">Inquiry Type</label>
+                            <select id="type" name="type" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150 bg-white">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="Landscaping Design">Landscaping Design</option>
+                                <option value="Manpower Staffing">Manpower Staffing</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="mt-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Project Details</label>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary transition duration-150"></textarea>
+                        </div>
+                        <div class="mt-8 text-center">
+                            <button type="submit" class="w-full sm:w-auto px-8 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
+                                Send Inquiry
+                            </button>
+                        </div>
+                        <div id="formMessage" class="mt-4 text-center text-sm font-medium hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="images/green-solutions-logo2.png" alt="Meta Green Solutions" class="h-12 mx-auto mb-3"/>
+            <div class="flex justify-center space-x-4 mb-4 text-sm">
+                <a href="home.html" class="hover:text-primary transition duration-300">Home</a>
+                <a href="services.html" class="hover:text-primary transition duration-300">Services</a>
+                <a href="contact.html" class="hover:text-primary transition duration-300">Contact</a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Meta Green Solutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        });
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            
+            formMessage.classList.remove('hidden');
+            formMessage.classList.remove('text-red-600', 'text-primary');
+            formMessage.innerHTML = 'Sending inquiry...';
+
+            setTimeout(() => {
+                formMessage.classList.add('text-primary');
+                formMessage.innerHTML = 'Thank you! Your inquiry has been sent successfully. We will be in touch within 24 hours.';
+                form.reset();
+                
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
